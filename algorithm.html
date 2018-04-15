@@ -1,0 +1,58 @@
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css"/>
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+<div>
+  <div>
+    <h1>Choose CPU processing algorithm:</h1>
+    <form id="algorithm">
+      <input type="radio", class="option-input checkbox" name="algorithm" value="fcfs" checked/> FCFS<br/>
+      <input type="radio", class="option-input checkbox" name="algorithm" value="robin"/> Round Robin
+    </form>
+    <br>
+  </div>
+    <table id="inputTable">
+        <tr>
+            <th>Process</th>
+            <th>Arrival Time</th>
+            <th>Execute Time</th>
+            <th class="servtime">Service Time</th>
+        </tr>
+        <tr>
+            <td>P0</td>
+            <td>0</td>
+            <td><input class="initial exectime" type="text" value="5" /></td>
+            <td class="servtime"></td>
+        </tr>
+        <tr>
+            <td>P1</td>
+            <td>1</td>
+            <td><input class="initial exectime" value="3" /></td>
+            <td class="servtime"></td>
+        </tr>
+    </table>
+    <input id="minus" class="minus" type="button" value="-" onclick="deleteRow()" />
+    <input class="plus" type="button" value="+" onclick="addRow()" />
+    </div>
+
+<div>
+  </div>    
+    <p id="quantumParagraph" hidden>Quantum: 
+            <span class="input"> <input id="quantum" type="text" value="5" /><span></span>   
+</span>
+    </p>
+    <input class="draw" type="button" value="Go" onclick="draw()" />
+    <br/><br/>
+
+    <result>
+    </result>
+    <p>
+    Timer: <strong id="timer"></strong> sec
+    </p>
+</body>
+</html>
