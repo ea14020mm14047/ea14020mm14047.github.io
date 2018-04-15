@@ -7,7 +7,7 @@
     <script src="script.js"></script>
 </head>
 <body>
-<div>
+<div class="centered">
   <div>
     <h1>Choose CPU processing algorithm:</h1>
     <form id="algorithm">
@@ -38,11 +38,8 @@
     </table>
     <input id="minus" class="minus" type="button" value="-" onclick="deleteRow()" />
     <input class="plus" type="button" value="+" onclick="addRow()" />
-    </div>
-
-<div>
-  </div>    
-    <p id="quantumParagraph" hidden>Quantum: 
+	
+	<p id="quantumParagraph" hidden>Quantum: 
             <span class="input"> <input id="quantum" type="text" value="5" /><span></span>   
 </span>
     </p>
@@ -54,5 +51,6 @@
     <p>
     Timer: <strong id="timer"></strong> sec
     </p>
+    </div>
 </body>
 </html>

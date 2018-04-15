@@ -258,3 +258,9 @@ input {
       transition-property: all;
   transition-timing-function: line;
 }
+
+.centered {
+	margin: auto;
+	width: 60%;
+	margin-top: 75px;
+}
